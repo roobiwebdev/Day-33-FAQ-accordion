@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9eeff;
+  position: relative;
+}
+
+.bg-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.bg-mobile {
+  display: none;
+}
+
+.container {
+  width: 37.5rem;
+  min-height: 580px;
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2.2rem;
+  border-radius: 15px;
+  box-shadow: 0px 20px 57px -43px rgba(162, 0, 255, 1);
+}
+
+nav {
+  display: flex;
+}
+
+nav h1 {
+  font-size: 3.7rem;
+  margin-left: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.questions {
+  /* height: 100px; */
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.Q-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #432847;
+}
+
+.Q-title h3 {
+  font-size: 1.125rem;
+}
+
+.Q-title img {
+  cursor: pointer;
+}
+
+.icon-minus {
+  display: none;
+}
+.disc {
+  padding: 0.5rem 0 1rem 0;
+  color: hsl(292, 16%, 49%);
+  line-height: 23px;
+
+  display: none;
+}
+
+
+@media screen and (width<=760px) {
+  body {
+    min-height: 110vh;
+  }
+  .bg-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .bg-desktop {
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+    padding: 1rem;
+    min-height: 400px;
+  }
+
+  nav h1 {
+    font-size: 2.5rem;
+  }
+}
